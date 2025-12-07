@@ -1,59 +1,49 @@
 import Link from 'next/link'
-import { Instagram, Facebook, Mail, Phone, MapPin } from 'lucide-react'
+import { Instagram, Facebook, Mail, Phone, MapPin, ChevronDown } from 'lucide-react'
+import Header from '../components/Header'
+import CourseCard from '../components/CourseCard'
+import ShimmerButton from '../components/ShimmerButton'
+import RotatingText from '../components/RotatingText'
+import ParticleBackground from '../components/ParticleBackground'
+import AnimatedCounter from '../components/AnimatedCounter'
+import AnimatedDivider from '../components/AnimatedDivider'
+import TestimonialCarousel from '../components/TestimonialCarousel'
 
 export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-primary-light/95 backdrop-blur-sm border-b border-border">
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <img
-              src="/logo-new.png"
-              alt="Rossana Altez Logo"
-              className="h-28 w-auto object-contain"
-            />
-          </div>
-          <nav className="hidden md:flex items-center gap-12">
-            <Link
-              href="#cursos"
-              className="font-serif text-lg tracking-widest uppercase text-foreground hover:text-accent transition-colors font-medium"
-            >
-              Cursos
-            </Link>
-            <Link
-              href="#conocenos"
-              className="font-serif text-lg tracking-widest uppercase text-foreground hover:text-accent transition-colors font-medium"
-            >
-              Conócenos
-            </Link>
-            <Link
-              href="#contacto"
-              className="font-serif text-lg tracking-widest uppercase text-foreground hover:text-accent transition-colors font-medium"
-            >
-              Contáctanos
-            </Link>
-          </nav>
-        </div>
-      </header>
+      <Header />
 
-      {/* Hero Section */}
-      <section className="min-h-screen flex flex-col justify-center pt-48 pb-32 px-4 bg-gradient-to-br from-primary-light via-primary to-primary-dark">
-        <div className="container mx-auto max-w-4xl text-center">
-          <h1 className="font-serif text-5xl md:text-7xl font-bold text-foreground mb-6 text-balance">
-            Transforma Tu Vida con Coaching Holístico
+      <section className="min-h-screen flex flex-col justify-center pt-48 pb-32 px-4 bg-gradient-to-br from-primary-light via-primary to-primary-dark relative overflow-hidden">
+        <ParticleBackground />
+        <div className="container mx-auto max-w-4xl text-center relative z-10">
+          <h1 className="font-serif text-4xl md:text-7xl font-bold text-foreground mb-6 text-balance">
+            Transforma Tu Vida con <span className="block mt-2"><RotatingText words={["Libertad Económica y Emocional", "Coaching Holístico", "Bienestar Integral", "Paz Interior"]} className="text-accent" /></span>
           </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground mb-10 leading-relaxed max-w-2xl mx-auto text-pretty">
-            Descubre tu mejor versión a través de mentorías personalizadas que integran mente, cuerpo y espíritu
+          <p className="text-lg md:text-2xl text-muted-foreground mb-10 leading-relaxed max-w-2xl mx-auto text-pretty px-4">
+            Descubre tu mejor versión a través de mentorías personalizadas, cursos Online de crecimiento personal y terapias Holísticas.
           </p>
-          <a
-            href="#cursos"
-            className="inline-block bg-accent hover:bg-accent-gold text-white px-10 py-4 rounded-full text-lg font-medium transition-all hover:scale-105 shadow-lg"
-          >
-            Explorar Cursos
-          </a>
+          <ShimmerButton href="#cursos">
+            Explorar
+          </ShimmerButton>
+        </div>
+
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce text-white/80">
+          <ChevronDown className="w-10 h-10" />
         </div>
       </section>
+
+      {/* Stats Section */}
+      <section className="py-12 bg-background border-b border-border/50">
+        <div className="container mx-auto flex flex-wrap justify-center gap-12 md:gap-24">
+          <AnimatedCounter end={15} label="Años de Experiencia" />
+          <AnimatedCounter end={500} label="Vidas Transformadas" />
+          <AnimatedCounter end={20} label="Cursos Impartidos" />
+        </div>
+      </section>
+
+      <AnimatedDivider />
 
       {/* About Section */}
       <section id="conocenos" className="py-20 px-4 bg-card">
@@ -69,7 +59,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                Soy Rossana Altez, coach holística dedicada a guiar personas hacia su transformación personal completa. Con más de 10 años de experiencia, combino técnicas ancestrales con metodologías modernas.
+                Soy Rossana Altez, coaching holística dedicada a guiar personas hacia su transformación personal completa. Con más de 15 años de experiencia, combino técnicas ancestrales con metodologías modernas como programación neuro lingüística (PNL) y programas de crecimiento personal.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
                 Mi enfoque integra el bienestar emocional, mental y espiritual, creando un espacio seguro donde puedes reconectar contigo mismo y descubrir tu verdadero potencial.
@@ -82,7 +72,7 @@ export default function Home() {
             <div className="relative">
               <div className="aspect-square rounded-2xl overflow-hidden bg-primary-dark">
                 <img
-                  src="/placeholder.svg?key=cc093"
+                  src="/rossana-about.jpg"
                   alt="Rossana Altez"
                   className="w-full h-full object-cover"
                 />
@@ -92,6 +82,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <AnimatedDivider />
 
       {/* Testimonials Section */}
       <section className="py-20 px-4 bg-background">
@@ -106,50 +98,29 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
+          <TestimonialCarousel
+            items={[
               {
-                quote: "El coaching con Rossana cambió completamente mi perspectiva. Ahora tengo claridad sobre mi propósito y siento paz interior.",
-                name: "María González",
+                quote: "Comence con una apertura de registros akashicos, este gran paso hacia mi busqueda de respuesta. Fue una gran guía.",
+                name: "Jessica Tabeira",
                 rating: 5
               },
               {
-                quote: "Las mentorías holísticas me ayudaron a superar bloqueos emocionales que llevaba años cargando. Eternamente agradecida.",
-                name: "Carmen Rodríguez",
+                quote: "Conoci a Rossana en 2018, en uno de los momentos mas dificiles de mi adolecencia. LLego a mi vida como una luz en medio de la oscuridad, justo cuando mas necesitaba claridad y contención.",
+                name: "Anahí Gonzáles",
                 rating: 5
               },
               {
-                quote: "Un enfoque único que integra todo mi ser. Rossana es una guía extraordinaria en este camino de transformación.",
-                name: "Laura Martínez",
+                quote: "Cuando conoci a Rossana en 2017 me encontraba con el autoestima baja y sin confianza en mi misma, a través del acompañamiento como coaching pude crear la mejor version de mi, soltando los miedos y dejando de repetir patrones.",
+                name: "Stella Toledo",
                 rating: 5
               }
-            ].map((testimonial, index) => (
-              <div
-                key={index}
-                className="bg-card p-8 rounded-2xl border border-accent/20 hover:border-accent/40 transition-all hover:shadow-xl"
-              >
-                <div className="flex gap-1 mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <svg
-                      key={i}
-                      className="w-5 h-5 fill-accent-gold"
-                      viewBox="0 0 20 20"
-                    >
-                      <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
-                    </svg>
-                  ))}
-                </div>
-                <p className="text-muted-foreground leading-relaxed mb-6 italic">
-                  "{testimonial.quote}"
-                </p>
-                <p className="font-medium text-foreground">
-                  {testimonial.name}
-                </p>
-              </div>
-            ))}
-          </div>
+            ]}
+          />
         </div>
       </section>
+
+      <AnimatedDivider />
 
       {/* Courses Section */}
       <section id="cursos" className="py-20 px-4 bg-card">
@@ -164,76 +135,46 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Despertar Interior",
-                description: "Reconecta con tu esencia y descubre tu propósito de vida a través de prácticas profundas de autoconocimiento.",
-                price: "$199",
-                duration: "8 semanas"
-              },
-              {
-                title: "Equilibrio Emocional",
-                description: "Aprende a gestionar tus emociones y crear estados de paz y armonía en tu vida diaria.",
-                price: "$149",
-                duration: "6 semanas"
-              },
-              {
-                title: "Mentoría Personalizada",
-                description: "Sesiones individuales adaptadas a tus necesidades específicas con seguimiento continuo.",
-                price: "$299",
-                duration: "12 semanas"
-              },
-              {
-                title: "Sanación Holística",
-                description: "Integra mente, cuerpo y espíritu con técnicas ancestrales y prácticas terapéuticas modernas.",
-                price: "$179",
-                duration: "10 semanas"
-              },
-              {
-                title: "Abundancia Consciente",
-                description: "Transforma tu relación con la prosperidad y atrae abundancia desde un lugar de consciencia.",
-                price: "$169",
-                duration: "8 semanas"
-              },
-              {
-                title: "Liderazgo Femenino",
-                description: "Empodera tu esencia femenina y desarrolla un liderazgo auténtico desde tu interior.",
-                price: "$219",
-                duration: "10 semanas"
-              }
-            ].map((course, index) => (
-              <div
-                key={index}
-                className="bg-background p-8 rounded-2xl border border-primary-dark hover:border-accent transition-all hover:shadow-xl group"
-              >
-                <div className="mb-4">
-                  <div className="w-12 h-12 rounded-full bg-accent-light flex items-center justify-center mb-4 group-hover:bg-accent transition-colors">
-                    <div className="w-6 h-6 rounded-full bg-accent group-hover:bg-white transition-colors"></div>
-                  </div>
-                </div>
-                <h3 className="font-serif text-2xl font-bold text-foreground mb-3">
-                  {course.title}
-                </h3>
-                <p className="text-muted-foreground leading-relaxed mb-6">
-                  {course.description}
-                </p>
-                <div className="flex items-center justify-between mb-6">
-                  <span className="text-3xl font-bold text-accent">
-                    {course.price}
-                  </span>
-                  <span className="text-sm text-muted">
-                    {course.duration}
-                  </span>
-                </div>
-                <a
-                  href="mailto:contacto@rossanaaltez.com"
-                  className="block w-full text-center bg-accent hover:bg-accent-gold text-white py-3 rounded-full font-medium transition-all hover:scale-105"
-                >
-                  Ver Más
-                </a>
-              </div>
-            ))}
+          {/* Cursos Holísticos */}
+          <div className="mb-16">
+            <h3 className="font-serif text-3xl font-bold text-accent mb-8 text-center">Cursos Holísticos</h3>
+            <div className="grid md:grid-cols-2 gap-8">
+              {[
+                { title: "Registros Akashicos", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." },
+                { title: "Manifestacion", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." },
+                { title: "Tameana", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." },
+                { title: "Sanacion de utero", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." },
+                { title: "Terapia con cristales", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." },
+                { title: "Tarot", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." },
+                { title: "Estres y ansiedad", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." }
+              ].map((course, index) => (
+                <CourseCard
+                  key={index}
+                  title={course.title}
+                  description={course.description}
+                  duration="Consultar"
+                />
+              ))}
+            </div>
+          </div>
+
+          {/* Cursos de Crecimiento Personal */}
+          <div>
+            <h3 className="font-serif text-3xl font-bold text-accent mb-8 text-center">Cursos de Crecimiento Personal</h3>
+            <div className="grid md:grid-cols-2 gap-8">
+              {[
+                { title: "Programación Neuro Lingüística (PNL)", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." },
+                { title: "Desarrollo Personal", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." },
+                { title: "Autoestima", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." }
+              ].map((course, index) => (
+                <CourseCard
+                  key={index}
+                  title={course.title}
+                  description={course.description}
+                  duration="Consultar"
+                />
+              ))}
+            </div>
           </div>
         </div>
       </section>
