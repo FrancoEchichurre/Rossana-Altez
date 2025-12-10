@@ -9,10 +9,15 @@ import { Menu, X } from 'lucide-react'
 export default function Header() {
     const [scrolled, setScrolled] = useState(false)
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+    // Add state to track if we've scrolled past the hero (approx. 80vh or similar)
+    const [pastHero, setPastHero] = useState(false)
 
     useEffect(() => {
         const handleScroll = () => {
-            setScrolled(window.scrollY > 0)
+            const scrollY = window.scrollY
+            setScrolled(scrollY > 0)
+            // Assuming hero is roughly window height, but let's trigger it earlier for better feel
+            setPastHero(scrollY > window.innerHeight * 0.8)
         }
 
         window.addEventListener('scroll', handleScroll)
@@ -21,11 +26,11 @@ export default function Header() {
 
     return (
         <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'backdrop-blur-md border-b border-border/50 shadow-sm' : 'bg-transparent'
-            }`}>
-            <div className="container mx-auto px-4 py-4 flex items-center justify-between md:justify-center md:gap-32">
-                <div className="flex items-center gap-2">
+            } ${pastHero ? 'py-2' : ''}`}> {/* Reduce padding when past hero */}
+            <div className={`container mx-auto px-4 ${pastHero ? 'py-1' : 'py-4'} flex items-center justify-between md:justify-center md:gap-32 transition-all duration-300`}>
+                <div className={`flex items-center gap-2 transition-opacity duration-300 ${pastHero ? 'hidden md:flex' : 'flex'}`}>
                     <img
-                        src="/Captura_de_pantalla_2025-12-07_174851-removebg-preview_upscayl_4x_upscayl-standard-4x.png"
+                        src="/logoheader.png"
                         alt="Rossana Altez Logo"
                         className="h-28 w-auto object-contain"
                     />
@@ -53,7 +58,7 @@ export default function Header() {
 
                 {/* Mobile Menu Button */}
                 <button
-                    className="md:hidden p-2 text-foreground"
+                    className={`md:hidden p-2 text-foreground ${pastHero ? 'ml-auto mr-8' : ''}`}
                     onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 >
                     {isMobileMenuOpen ? <X /> : <Menu />}
