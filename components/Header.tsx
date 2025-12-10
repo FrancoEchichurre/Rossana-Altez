@@ -25,7 +25,7 @@ export default function Header() {
             <div className="container mx-auto px-4 py-4 flex items-center justify-between md:justify-center md:gap-32">
                 <div className="flex items-center gap-2">
                     <img
-                        src="/logoheader.png"
+                        src="/Captura_de_pantalla_2025-12-07_174851-removebg-preview_upscayl_4x_upscayl-standard-4x.png"
                         alt="Rossana Altez Logo"
                         className="h-28 w-auto object-contain"
                     />

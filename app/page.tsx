@@ -1,5 +1,5 @@
-import Link from 'next/link'
-import { Instagram, Facebook, Mail, Phone, MapPin, ChevronDown } from 'lucide-react'
+
+import { ChevronDown } from 'lucide-react'
 import Header from '../components/Header'
 import CourseCard from '../components/CourseCard'
 import ShimmerButton from '../components/ShimmerButton'
@@ -8,6 +8,7 @@ import ParticleBackground from '../components/ParticleBackground'
 import AnimatedCounter from '../components/AnimatedCounter'
 import AnimatedDivider from '../components/AnimatedDivider'
 import TestimonialCarousel from '../components/TestimonialCarousel'
+import Footer from '../components/Footer'
 
 export default function Home() {
   return (
@@ -131,7 +132,7 @@ export default function Home() {
             </h2>
             <div className="w-24 h-1 bg-accent mx-auto mb-4"></div>
             <p className="text-lg text-muted-foreground">
-              Programas diseñados para tu crecimiento integral
+              Hacer un curso de desarrollo personal o profesional proporciona herramientas para mejorar habilidades, aumentar la empleabilidad, fomentar la autoconfianza y establecer metas claras, lo que resulta en un crecimiento integral y una mejor adaptación al entorno laboral y personal.
             </p>
           </div>
 
@@ -140,13 +141,13 @@ export default function Home() {
             <h3 className="font-serif text-3xl font-bold text-accent mb-8 text-center">Cursos Holísticos</h3>
             <div className="grid md:grid-cols-2 gap-8">
               {[
-                { title: "Registros Akashicos", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." },
-                { title: "Manifestacion", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." },
-                { title: "Tameana", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." },
-                { title: "Sanacion de utero", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." },
-                { title: "Terapia con cristales", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." },
-                { title: "Tarot", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." },
-                { title: "Estres y ansiedad", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." }
+                { title: "Registros Akashicos", description: "El curso brinda herramientas para comprender mejor los patrones de vida, las decisiones y los procesos emocionales, permitiendo obtener claridad, guía y entendimiento. Además, ofrece la posibilidad de utilizar esta conexión tanto para el propio desarrollo como para acompañar a otros en su camino terapéutico o espiritual." },
+                { title: "Manifestacion", description: "Hacer un curso de manifestación permite aprender técnicas para atraer y materializar deseos y metas en la vida, mejorando la autoconfianza y la claridad en los objetivos, y fomentando una mentalidad positiva que conduce a mayores oportunidades y éxito personal." },
+                { title: "Tameana", description: "Hacer el curso de Tameana te enseña una técnica de sanación energética simple y potente para equilibrar emociones, reducir estrés y potenciar el crecimiento personal; además es práctica, fácil de aplicar a otros y a ti mismo, y abre posibilidades para trabajo terapéutico o autocuidado." },
+                { title: "Sanacion de utero", description: "Hacer una sanación de útero ayuda a liberar traumas emocionales y bloqueos vinculados a la feminidad, mejora el bienestar emocional y la relación con tu cuerpo, puede apoyar la fertilidad y la vida sexual, y aporta mayor sensación de empoderamiento y equilibrio interior." },
+                { title: "Terapia con cristales", description: "La terapia con cristales usa piedras y minerales para equilibrar la energía del cuerpo, apoyar la sanación emocional y mental, y potenciar la intención terapéutica mediante la colocación y la intención sobre puntos energéticos. Hacer una terapia con cristales puede equilibrar tu energía, reducir estrés y ansiedad, apoyar la sanación emocional, mejorar la claridad mental y potenciar intenciones personales mediante la interacción consciente con piedras y minerales." },
+                { title: "Tarot", description: "El tarot es un sistema de cartas simbólicas usado como herramienta de orientación y autoconocimiento para explorar situaciones, patrones emocionales y posibles caminos mediante la intuición y la interpretación." },
+                { title: "Estres y ansiedad", description: "Un curso o taller de estrés y ansiedad proporciona herramientas prácticas para manejar y reducir estos síntomas, mejora la comprensión de sus causas, fomenta el autocuidado y promueve técnicas de relajación y bienestar que pueden transformar la calidad de vida. El estrés es una respuesta física y emocional a demandas o presiones externas que puede provocar tensión y malestar. La ansiedad es una reacción emocional caracterizada por preocupaciones persistentes y miedos que pueden afectar el bienestar y la calidad de vida." }
               ].map((course, index) => (
                 <CourseCard
                   key={index}
@@ -163,9 +164,9 @@ export default function Home() {
             <h3 className="font-serif text-3xl font-bold text-accent mb-8 text-center">Cursos de Crecimiento Personal</h3>
             <div className="grid md:grid-cols-2 gap-8">
               {[
-                { title: "Programación Neuro Lingüística (PNL)", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." },
-                { title: "Desarrollo Personal", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." },
-                { title: "Autoestima", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." }
+                { title: "Programación Neuro Lingüística (PNL)", description: "La Programación Neurolingüística (PNL) es un conjunto de técnicas y modelos que estudian la conexión entre el lenguaje, el cerebro y el comportamiento, permitiendo a las personas reprogramar sus patrones de pensamiento y mejorar su comunicación y desarrollo personal. Hacer un curso de PNL mejora la comunicación, potencia habilidades personales y profesionales, facilita el cambio de creencias limitantes y fomenta el autoconocimiento, proporcionando herramientas prácticas para alcanzar metas y mejorar relaciones." },
+                { title: "Desarrollo Personal y Profesional", description: "El desarrollo personal y profesional es el proceso continuo de adquirir habilidades, conocimientos y experiencias que mejoran la calidad de vida y potencian el rendimiento en el ámbito laboral, promoviendo el crecimiento integral de un individuo en diversas áreas." },
+                { title: "Autoestima", description: "La autoestima es la percepción y valoración que una persona tiene de sí misma, que influye en su confianza, bienestar emocional y cómo se relaciona con los demás. Una autoestima positiva contribuye a un desarrollo personal y social saludable." }
               ].map((course, index) => (
                 <CourseCard
                   key={index}
@@ -179,111 +180,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer id="contacto" className="bg-foreground text-primary-light py-16 px-4">
-        <div className="container mx-auto max-w-6xl">
-          <div className="grid md:grid-cols-3 gap-12 mb-12">
-            {/* Contact */}
-            <div>
-              <h3 className="font-serif text-2xl font-bold mb-6 text-accent-light">
-                Contacto
-              </h3>
-              <div className="space-y-4">
-                <a
-                  href="mailto:contacto@rossanaaltez.com"
-                  className="flex items-center gap-3 hover:text-accent-light transition-colors"
-                >
-                  <Mail className="w-5 h-5 text-accent" />
-                  <span>contacto@rossanaaltez.com</span>
-                </a>
-                <a
-                  href="tel:+1234567890"
-                  className="flex items-center gap-3 hover:text-accent-light transition-colors"
-                >
-                  <Phone className="w-5 h-5 text-accent" />
-                  <span>+34 123 456 789</span>
-                </a>
-                <div className="flex items-center gap-3">
-                  <MapPin className="w-5 h-5 text-accent" />
-                  <span>Madrid, España</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Social Media */}
-            <div>
-              <h3 className="font-serif text-2xl font-bold mb-6 text-accent-light">
-                Redes Sociales
-              </h3>
-              <div className="flex gap-4">
-                <a
-                  href="https://instagram.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-12 h-12 rounded-full bg-accent hover:bg-accent-gold flex items-center justify-center transition-all hover:scale-110"
-                >
-                  <Instagram className="w-6 h-6 text-white" />
-                </a>
-                <a
-                  href="https://facebook.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-12 h-12 rounded-full bg-accent hover:bg-accent-gold flex items-center justify-center transition-all hover:scale-110"
-                >
-                  <Facebook className="w-6 h-6 text-white" />
-                </a>
-                <a
-                  href="https://wa.me/1234567890"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-12 h-12 rounded-full bg-accent hover:bg-accent-gold flex items-center justify-center transition-all hover:scale-110"
-                >
-                  <Phone className="w-6 h-6 text-white" />
-                </a>
-              </div>
-            </div>
-
-            {/* Quick Links */}
-            <div>
-              <h3 className="font-serif text-2xl font-bold mb-6 text-accent-light">
-                Enlaces Rápidos
-              </h3>
-              <ul className="space-y-3">
-                <li>
-                  <Link
-                    href="#cursos"
-                    className="hover:text-accent-light transition-colors"
-                  >
-                    Cursos
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#conocenos"
-                    className="hover:text-accent-light transition-colors"
-                  >
-                    Sobre Mí
-                  </Link>
-                </li>
-                <li>
-                  <a
-                    href="mailto:contacto@rossanaaltez.com"
-                    className="hover:text-accent-light transition-colors"
-                  >
-                    Contacto
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="pt-8 border-t border-accent/30 text-center text-sm">
-            <p>
-              © {new Date().getFullYear()} Rossana Altez - Coaching & Mentorías Holísticas. Todos los derechos reservados.
-            </p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }
