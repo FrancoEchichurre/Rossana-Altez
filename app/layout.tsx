@@ -14,23 +14,53 @@ export const metadata: Metadata = {
   title: "Rossana Altez - Coaching & Mentorías Holísticas",
   description:
     "Transforma tu vida con coaching holístico personalizado. Descubre tu mejor versión a través de mentorías que integran mente, cuerpo y espíritu.",
-  generator: "v0.app",
-  icons: {
-    icon: [
+  generator: "Next.js",
+  applicationName: "Rossana Altez",
+  referrer: "origin-when-cross-origin",
+  keywords: ["Desarrollo Personal", "Coaching Holístico", "Mentorías", "Espiritualidad", "Rossana Altez", "Bienestar", "Crecimiento Personal"],
+  authors: [{ name: "Rossana Altez" }],
+  creator: "Rossana Altez",
+  publisher: "Rossana Altez",
+  metadataBase: new URL("https://rossanaaltez.com"), // Placeholder URL - recommended to update when domain is known
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Rossana Altez - Coaching & Mentorías Holísticas",
+    description: "Transforma tu vida con coaching holístico personalizado. Descubre tu mejor versión.",
+    url: "https://rossanaaltez.com",
+    siteName: "Rossana Altez",
+    images: [
       {
-        url: "/icon-light-32x32.png",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "/icon-dark-32x32.png",
-        media: "(prefers-color-scheme: dark)",
-      },
-      {
-        url: "/icon.svg",
-        type: "image/svg+xml",
+        url: "/logo-new.png",
+        width: 800,
+        height: 600,
+        alt: "Rossana Altez Logo",
       },
     ],
-    apple: "/apple-icon.png",
+    locale: "es_ES",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Rossana Altez - Coaching & Mentorías Holísticas",
+    description: "Transforma tu vida con coaching holístico personalizado.",
+    images: ["/logo-new.png"],
+  },
+  icons: {
+    icon: "/logo-new.png",
+    apple: "/logo-new.png",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 }
 

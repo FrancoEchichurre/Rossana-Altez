@@ -43,11 +43,17 @@ export default function Home() {
 
       {/* Stats Section */}
       <section className="py-12 bg-background border-b border-border/50">
-        <ScrollReveal className="container mx-auto flex flex-wrap justify-center gap-12 md:gap-24">
-          <AnimatedCounter end={15} label="Años de Experiencia" />
-          <AnimatedCounter end={500} label="Vidas Transformadas" />
-          <AnimatedCounter end={20} label="Cursos Impartidos" />
-        </ScrollReveal>
+        <div className="container mx-auto flex flex-wrap justify-center gap-12 md:gap-24">
+          <ScrollReveal delay={0}>
+            <AnimatedCounter end={15} label="Años de Experiencia" />
+          </ScrollReveal>
+          <ScrollReveal delay={200}>
+            <AnimatedCounter end={500} label="Vidas Transformadas" />
+          </ScrollReveal>
+          <ScrollReveal delay={400}>
+            <AnimatedCounter end={20} label="Cursos Impartidos" />
+          </ScrollReveal>
+        </div>
       </section>
 
       <AnimatedDivider />

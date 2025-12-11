@@ -17,18 +17,18 @@ export default function Footer() {
                                 className="flex items-center gap-3 hover:text-accent-light transition-colors"
                             >
                                 <Mail className="w-5 h-5 text-accent" />
-                                <span>contacto@rossanaaltez.com</span>
+                                <span>roussealtez74@gmail.com</span>
                             </a>
                             <a
                                 href="tel:+1234567890"
                                 className="flex items-center gap-3 hover:text-accent-light transition-colors"
                             >
                                 <Phone className="w-5 h-5 text-accent" />
-                                <span>+34 123 456 789</span>
+                                <span>+598 94 402 452</span>
                             </a>
                             <div className="flex items-center gap-3">
                                 <MapPin className="w-5 h-5 text-accent" />
-                                <span>Madrid, España</span>
+                                <span>Punta del Este, Uruguay</span>
                             </div>
                         </div>
                     </div>
@@ -56,7 +56,7 @@ export default function Footer() {
                                 <Facebook className="w-6 h-6 text-white" />
                             </a>
                             <a
-                                href="https://wa.me/1234567890"
+                                href="https://wa.me/+59894402452"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="w-12 h-12 rounded-full bg-accent hover:bg-accent-gold flex items-center justify-center transition-all hover:scale-110"

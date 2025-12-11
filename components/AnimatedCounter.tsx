@@ -42,7 +42,7 @@ export default function AnimatedCounter({ end, duration = 2000, label }: Animate
     }, [end, duration, hasAnimated])
 
     return (
-        <div ref={ref} className="text-center">
+        <div ref={ref} className="text-center transform transition-transform duration-300 hover:scale-110">
             <div className="font-serif text-4xl md:text-5xl font-bold text-accent mb-2">
                 {count}+
             </div>

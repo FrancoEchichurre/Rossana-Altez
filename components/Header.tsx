@@ -29,11 +29,13 @@ export default function Header() {
             } ${pastHero ? 'py-2' : ''}`}> {/* Reduce padding when past hero */}
             <div className={`container mx-auto px-4 ${pastHero ? 'py-1' : 'py-4'} flex items-center justify-between md:justify-center md:gap-32 transition-all duration-300`}>
                 <div className={`flex items-center gap-2 transition-opacity duration-300 ${pastHero ? 'hidden md:flex' : 'flex'}`}>
-                    <img
-                        src="/logoheader.png"
-                        alt="Rossana Altez Logo"
-                        className="h-28 w-auto object-contain"
-                    />
+                    <Link href="/">
+                        <img
+                            src="/logoheader.png"
+                            alt="Rossana Altez Logo"
+                            className="h-28 w-auto object-contain cursor-pointer"
+                        />
+                    </Link>
                 </div>
                 <nav className="hidden md:flex items-center gap-12">
                     <Link
