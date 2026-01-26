@@ -22,7 +22,7 @@ export default function Home() {
         <div className="container mx-auto max-w-4xl text-center relative z-10">
           <ScrollReveal>
             <h1 className="font-serif text-4xl md:text-7xl font-bold text-foreground mb-6 text-balance">
-              Transforma Tu Vida con <span className="block mt-2"><RotatingText words={["Libertad Económica y Emocional", "Coaching Holístico", "Bienestar Integral", "Paz Interior"]} className="text-accent" /></span>
+              Transforma tu vida con <span className="block mt-2"><RotatingText words={["Libertad Económica y Emocional", "Coaching Holístico", "Bienestar Integral", "Paz Interior"]} className="text-accent" /></span>
             </h1>
           </ScrollReveal>
           <ScrollReveal delay={200}>
@@ -122,13 +122,28 @@ export default function Home() {
                 rating: 5
               },
               {
-                quote: "Conoci a Rossana en 2018, en uno de los momentos mas dificiles de mi adolecencia. LLego a mi vida como una luz en medio de la oscuridad, justo cuando mas necesitaba claridad y contención.",
+                quote: "Conoci a Rossana en 2018, en uno de los momentos mas dificiles de mi adolecencia. Llego a mi vida como una luz en medio de la oscuridad, justo cuando mas necesitaba claridad y contención.",
                 name: "Anahí Gonzáles",
                 rating: 5
               },
               {
                 quote: "Cuando conoci a Rossana en 2017 me encontraba con el autoestima baja y sin confianza en mi misma, a través del acompañamiento como coaching pude crear la mejor version de mi, soltando los miedos y dejando de repetir patrones.",
                 name: "Stella Toledo",
+                rating: 5
+              },
+              {
+                quote: "Rossana tiene una calidez humana única. Su acompañamiento me permitió ver mis problemas desde otra perspectiva y encontrar la paz que tanto buscaba en mi vida diaria.",
+                name: "Maria Lopez",
+                rating: 5
+              },
+              {
+                quote: "Llegué buscando respuestas y encontré un camino de sanación profunda. Sus sesiones me ayudaron a reconectar con mi esencia y a vivir con más plenitud.",
+                name: "Carlos Rodriguez",
+                rating: 5
+              },
+              {
+                quote: "Gracias a su guía pude tomar decisiones importantes que venía postergando. Me sentí escuchada, comprendida y empoderada para avanzar en mi camino.",
+                name: "Sofia Mendez",
                 rating: 5
               }
             ]}

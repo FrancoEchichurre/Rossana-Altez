@@ -28,12 +28,12 @@ export default function Header() {
         <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'backdrop-blur-md border-b border-border/50 shadow-sm' : 'bg-transparent'
             } ${pastHero ? 'py-2' : ''}`}> {/* Reduce padding when past hero */}
             <div className={`container mx-auto px-4 ${pastHero ? 'py-1' : 'py-4'} flex items-center justify-between md:justify-center md:gap-32 transition-all duration-300`}>
-                <div className={`flex items-center gap-2 transition-opacity duration-300 ${pastHero ? 'hidden md:flex' : 'flex'}`}>
-                    <Link href="/">
+                <div className={`relative flex items-center justify-center w-64 h-20 transition-opacity duration-300 ${pastHero ? 'hidden md:flex' : 'flex'}`}>
+                    <Link href="/" className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                         <img
-                            src="/rossana-logo.png"
+                            src="/nuevologo.png"
                             alt="Rossana Altez Logo"
-                            className="h-28 w-auto object-contain cursor-pointer transition-transform hover:scale-105"
+                            className="h-40 w-auto max-w-none object-contain cursor-pointer transition-transform hover:scale-105"
                         />
                     </Link>
                 </div>
