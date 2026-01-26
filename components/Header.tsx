@@ -31,9 +31,9 @@ export default function Header() {
                 <div className={`flex items-center gap-2 transition-opacity duration-300 ${pastHero ? 'hidden md:flex' : 'flex'}`}>
                     <Link href="/">
                         <img
-                            src="/logoheader.png"
+                            src="/rossana-logo.png"
                             alt="Rossana Altez Logo"
-                            className="h-28 w-auto object-contain cursor-pointer"
+                            className="h-28 w-auto object-contain cursor-pointer transition-transform hover:scale-105"
                         />
                     </Link>
                 </div>

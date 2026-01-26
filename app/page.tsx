@@ -10,6 +10,7 @@ import AnimatedDivider from '../components/AnimatedDivider'
 import TestimonialCarousel from '../components/TestimonialCarousel'
 import ScrollReveal from '../components/ScrollReveal'
 import Footer from '../components/Footer'
+import HolisticCoursesList from '../components/HolisticCoursesList'
 
 export default function Home() {
   return (
@@ -153,30 +154,7 @@ export default function Home() {
           </ScrollReveal>
 
           {/* Cursos Holísticos */}
-          <div className="mb-16">
-            <ScrollReveal>
-              <h3 className="font-serif text-3xl font-bold text-accent mb-8 text-center">Cursos Holísticos</h3>
-            </ScrollReveal>
-            <div className="grid md:grid-cols-2 gap-8">
-              {[
-                { title: "Registros Akashicos", description: "El curso brinda herramientas para comprender mejor los patrones de vida, las decisiones y los procesos emocionales, permitiendo obtener claridad, guía y entendimiento. Además, ofrece la posibilidad de utilizar esta conexión tanto para el propio desarrollo como para acompañar a otros en su camino terapéutico o espiritual." },
-                { title: "Manifestacion", description: "Hacer un curso de manifestación permite aprender técnicas para atraer y materializar deseos y metas en la vida, mejorando la autoconfianza y la claridad en los objetivos, y fomentando una mentalidad positiva que conduce a mayores oportunidades y éxito personal." },
-                { title: "Tameana", description: "Hacer el curso de Tameana te enseña una técnica de sanación energética simple y potente para equilibrar emociones, reducir estrés y potenciar el crecimiento personal; además es práctica, fácil de aplicar a otros y a ti mismo, y abre posibilidades para trabajo terapéutico o autocuidado." },
-                { title: "Sanacion de utero", description: "Hacer una sanación de útero ayuda a liberar traumas emocionales y bloqueos vinculados a la feminidad, mejora el bienestar emocional y la relación con tu cuerpo, puede apoyar la fertilidad y la vida sexual, y aporta mayor sensación de empoderamiento y equilibrio interior." },
-                { title: "Terapia con cristales", description: "La terapia con cristales usa piedras y minerales para equilibrar la energía del cuerpo, apoyar la sanación emocional y mental, y potenciar la intención terapéutica mediante la colocación y la intención sobre puntos energéticos. Hacer una terapia con cristales puede equilibrar tu energía, reducir estrés y ansiedad, apoyar la sanación emocional, mejorar la claridad mental y potenciar intenciones personales mediante la interacción consciente con piedras y minerales." },
-                { title: "Tarot", description: "El tarot es un sistema de cartas simbólicas usado como herramienta de orientación y autoconocimiento para explorar situaciones, patrones emocionales y posibles caminos mediante la intuición y la interpretación." },
-                { title: "Estres y ansiedad", description: "Un curso o taller de estrés y ansiedad proporciona herramientas prácticas para manejar y reducir estos síntomas, mejora la comprensión de sus causas, fomenta el autocuidado y promueve técnicas de relajación y bienestar que pueden transformar la calidad de vida. El estrés es una respuesta física y emocional a demandas o presiones externas que puede provocar tensión y malestar. La ansiedad es una reacción emocional caracterizada por preocupaciones persistentes y miedos que pueden afectar el bienestar y la calidad de vida." }
-              ].map((course, index) => (
-                <ScrollReveal key={index} delay={index * 100}>
-                  <CourseCard
-                    title={course.title}
-                    description={course.description}
-                    duration="Consultar"
-                  />
-                </ScrollReveal>
-              ))}
-            </div>
-          </div>
+          <HolisticCoursesList />
 
           {/* Cursos de Crecimiento Personal */}
           <div>
@@ -185,8 +163,8 @@ export default function Home() {
             </ScrollReveal>
             <div className="grid md:grid-cols-2 gap-8">
               {[
-                { title: "Programación Neuro Lingüística (PNL)", description: "La Programación Neurolingüística (PNL) es un conjunto de técnicas y modelos que estudian la conexión entre el lenguaje, el cerebro y el comportamiento, permitiendo a las personas reprogramar sus patrones de pensamiento y mejorar su comunicación y desarrollo personal. Hacer un curso de PNL mejora la comunicación, potencia habilidades personales y profesionales, facilita el cambio de creencias limitantes y fomenta el autoconocimiento, proporcionando herramientas prácticas para alcanzar metas y mejorar relaciones." },
-                { title: "Desarrollo Personal y Profesional", description: "El desarrollo personal y profesional es el proceso continuo de adquirir habilidades, conocimientos y experiencias que mejoran la calidad de vida y potencian el rendimiento en el ámbito laboral, promoviendo el crecimiento integral de un individuo en diversas áreas." },
+                { title: "Programación Neuro Lingüística (PNL)", description: "La Programación Neurolingüística (PNL) es un conjunto de técnicas y modelos que estudian la conexión entre el lenguaje, el cerebro y el comportamiento, permitiendo a las personas reprogramar sus patrones de pensamiento y mejorar su comunicación y desarrollo personal. Hacer un curso de PNL mejora la comunicación, potencia habilidades personales y profesionales, facilita el cambio de creencias limitantes y fomenta el autoconocimiento, proporcionando herramientas prácticas para alcanzar metas y mejorar relaciones.", link: "https://hotmart.com/es/marketplace/productos/hagsxd-programacion-pnl-any7g/Y104049228L" },
+                { title: "Desarrollo Personal y Profesional", description: "El desarrollo personal y profesional es el proceso continuo de adquirir habilidades, conocimientos y experiencias que mejoran la calidad de vida y potencian el rendimiento en el ámbito laboral, promoviendo el crecimiento integral de un individuo en diversas áreas.", link: "https://hotmart.com/es/marketplace/productos/hagsxd-crecimiento-personal-kxema/D104050336X?sck=HOTMART_PRODUCT_PAGE" },
                 { title: "Autoestima", description: "La autoestima es la percepción y valoración que una persona tiene de sí misma, que influye en su confianza, bienestar emocional y cómo se relaciona con los demás. Una autoestima positiva contribuye a un desarrollo personal y social saludable." }
               ].map((course, index) => (
                 <ScrollReveal key={index} delay={index * 100}>
@@ -194,6 +172,7 @@ export default function Home() {
                     title={course.title}
                     description={course.description}
                     duration="Consultar"
+                    link={course.link}
                   />
                 </ScrollReveal>
               ))}
