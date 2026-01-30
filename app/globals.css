@@ -54,7 +54,6 @@
   --sidebar-border: oklch(0.88 0.02 75);
   --sidebar-ring: oklch(0.6 0.12 35);
 }
-
 .dark {
   /* Dark mode with warm tones maintained */
   --background: oklch(0.2 0.02 40);
