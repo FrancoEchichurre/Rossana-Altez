@@ -102,11 +102,11 @@ const Counters = () => {
   return (
     <AnimatedSection className="bg-cream-bg py-16">
       <div className="max-w-[1200px] mx-auto px-margin-mobile md:px-gutter">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center divide-y md:divide-y-0 md:divide-x divide-muted-earth/20">
+        <div className="grid grid-cols-3 gap-2 sm:gap-6 md:gap-12 text-center divide-x divide-muted-earth/20">
           {stats.map((stat, idx) => (
-            <div key={idx} className="space-y-2 py-6 md:py-0">
-              <p className="font-headline-lg text-headline-lg text-primary">{stat.value}</p>
-              <p className="font-label-md text-label-md text-muted-earth uppercase tracking-widest">{stat.label}</p>
+            <div key={idx} className="space-y-1 md:space-y-2 py-4 md:py-0 px-1 md:px-0">
+              <p className="text-2xl sm:text-3xl md:font-headline-lg md:text-headline-lg text-primary">{stat.value}</p>
+              <p className="text-[9px] sm:text-xs md:font-label-md md:text-label-md text-muted-earth uppercase tracking-widest leading-tight break-words">{stat.label}</p>
             </div>
           ))}
         </div>
