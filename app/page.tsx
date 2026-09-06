@@ -51,7 +51,7 @@ const Header = () => (
   <header className="w-full top-0 sticky z-50 bg-background/80 backdrop-blur-md shadow-[0_4px_24px_rgba(45,45,45,0.05)]">
     <nav className="flex justify-between items-center max-w-[1200px] mx-auto px-margin-mobile md:px-gutter h-20">
       <div className="flex items-center relative pl-16 md:pl-32">
-        <img alt="Rossana Altez Logo" className="absolute left-[-12px] md:left-[-24px] top-1/2 -translate-y-1/2 h-24 w-24 md:h-36 md:w-36 object-contain drop-shadow-sm" src="https://lh3.googleusercontent.com/aida/AP1WRLsk5ZM5MO-0faWyMRwqzp7CgCUUSMbm9rPc8Y-wnytnWIqsFxMIcIZ6JHLL82RNrpsYVWvYWEf8hR1rkOOTeSzzib2xKH0ebmvUrXFvuaORrbvo-8j4wxOFhEtzd1LGNq9fnkvYtyUtP8NxZHJgiwy1k1i2a2picrfX5RYKbrXGLRDeZgFqBxVKQS7qK1GD57_MFTf5BvEJO_-yrX9PHmp2o6--jkdMoo0TRKqoPWKIZYaiAv_AgNQp" />
+        <img alt="Rossana Altez Logo" className="absolute left-[-12px] md:left-[-24px] top-1/2 -translate-y-1/2 h-24 w-24 md:h-36 md:w-36 object-contain drop-shadow-sm" src="/logo-new.png" />
       </div>
       <div className="hidden md:flex items-center gap-8">
         <a className="font-label-md text-label-md text-charcoal-text hover:text-primary transition-colors" href="#cursos">Mentorías</a>
@@ -146,7 +146,7 @@ const About = () => (
           <img 
             alt="Rossana Altez" 
             className="w-full aspect-square object-cover rounded-lg shadow-2xl grayscale-[20%] hover:grayscale-0 transition-all duration-700" 
-            src="https://lh3.googleusercontent.com/aida/AP1WRLt5Ci_YXXQoGKJ1yGRSPB0cOviEjMz-EZP69uvEAPst8IUwTXk5ImJAfnxSGLxficq5eTGxGtCXlOrCe9tWK0wJ22BUuwzA6WJEz6k3jIbwj7IvI7a602rEFuZFpAd_s4WFdRGhC5oSQIGiYhyf3s6-hcmEftBNI6NET0vWzi9iCGp-_dBM1MvThtMWSqq32ARCOO2A52HqJkk72nduJNI8Bq0ebR6IMA9YvBshGaQwCn81EAOrP9iQC4E" 
+            src="/rossana-about.jpg" 
           />
         </div>
       </div>
@@ -337,14 +337,14 @@ const Courses = () => (
             isNew
             title="Estres y ansiedad"
             description="Un curso o taller de estrés y ansiedad proporciona herramientas prácticas para manejar y reducir estos síntomas, mejora la comprensión de sus causas y fomenta el autocuidado."
-            image="https://lh3.googleusercontent.com/aida-public/AB6AXuAEO20Jn8wlvl9a-CNVIdkBY1H56pwmTNyfJLkuVsUvx9npFSneQkmDwk7D4VEE1vJziUuQo03odEdA4GI0EEifR_-FPN2_KRB_XW9D_tEKkSRBygbjD3O4mG84Gcl85Iuw_V7uW_g5d3F9_xqpw6V9TnI3ybMzt2KIrnDRj-ceZILSz8NGoQjAo8Tonn6EL9KsVK5IA3SQQlMYMHGK3QGTW-g9eENrAvLJuJDfzXkyXxuFQPi80_9G"
+            image="/serene-woman-meditating-holistic-spa-wellness.jpg"
             link="https://hotmart.com/es/marketplace/productos/hagsxd-estres-y-ansiedad-du2fh/B103798851F?sck=HOTMART_PRODUCT_PAGE"
           />
           <CourseCard 
             isNew
             title="Constelaciones Familiares Sanar las Raices"
             description="Las Constelaciones Familiares ayudan a sanar patrones y conflictos transmitidos generacionalmente, restableciendo el orden y el equilibrio en el sistema familiar."
-            image="https://lh3.googleusercontent.com/aida-public/AB6AXuAi5rMNbI2zyj_PhItMiQ-wkntUmByf6aSlxiTRT_SxkcjrKfziNhAu7hNEHUjVbBsT6GJctShAg80k1estRnWCw5t2RG6owOIzuZwuCKS9XVpqc3XFCPycYjAa8FwIXWCv59ChWyR14th8h4nBawNai242BcKvRs-dYYpr2YJAMF-iM1KFWKgn0yppE22gycNt414X83J8Nqoa9ExzJ7AlMVFIVqqL_7SAU6S61EoHZBml_vKsstMl"
+            image="/placeholder.jpg"
             link="https://hotmart.com/es/marketplace/productos/constelaciones-familiares-sanar-las-raices/K104067889G?sck=HOTMART_PRODUCT_PAGE"
           />
         </div>
@@ -513,7 +513,7 @@ const Footer = () => (
       <div className="grid md:grid-cols-4 gap-12 text-left w-full">
         <div className="md:col-span-1 space-y-6">
           <div className="flex items-center">
-            <img alt="Logo" className="h-24 w-24 md:h-36 md:w-36 brightness-0 invert" src="https://lh3.googleusercontent.com/aida/AP1WRLsk5ZM5MO-0faWyMRwqzp7CgCUUSMbm9rPc8Y-wnytnWIqsFxMIcIZ6JHLL82RNrpsYVWvYWEf8hR1rkOOTeSzzib2xKH0ebmvUrXFvuaORrbvo-8j4wxOFhEtzd1LGNq9fnkvYtyUtP8NxZHJgiwy1k1i2a2picrfX5RYKbrXGLRDeZgFqBxVKQS7qK1GD57_MFTf5BvEJO_-yrX9PHmp2o6--jkdMoo0TRKqoPWKIZYaiAv_AgNQp" />
+            <img alt="Logo" className="h-24 w-24 md:h-36 md:w-36 brightness-0 invert" src="/logo-new.png" />
           </div>
           <p className="font-body-md text-body-md text-surface-variant/80">
             Guiando tu transformación personal con sabiduría holística y herramientas modernas.
